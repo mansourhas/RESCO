@@ -1,7 +1,7 @@
 import traci
 import copy
 import re
-from resco_benchmark.config.signal_config import signal_configs
+from config.signal_config import signal_configs
 
 
 def create_yellows(phases, yellow_length):

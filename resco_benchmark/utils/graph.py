@@ -170,6 +170,7 @@ for met_i, metric in enumerate(metrics):
         bot, top = plt.ylim()
         if bot < 0: bot = 0
         plt.ylim(bot, dqn_max)
+        plt.savefig(f'{map}_{metrics_str[met_i]}.png')
         plt.show()
 
 for alg in chart:

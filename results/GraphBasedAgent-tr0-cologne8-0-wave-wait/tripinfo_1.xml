@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-16 12:25:29 by Eclipse SUMO sumo Version 1.22.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/mansour/project/Traffic_signal_control/RESCO/resco_benchmark/environments/cologne8/cologne8.net.xml"/>
+        <route-files value="/home/mansour/project/Traffic_signal_control/RESCO/resco_benchmark/environments/cologne8/cologne8.rou.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="/home/mansour/project/Traffic_signal_control/RESCO/results/GraphBasedAgent-tr0-cologne8-0-wave-wait/tripinfo_1.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <time>
+        <begin value="25200"/>
+        <end value="28800"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <no-warnings value="True"/>
+        <no-step-log value="True"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="54919"/>
+    </traci_server>
+
+    <random_number>
+        <random value="true"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

@@ -1,16 +1,30 @@
-import resco_benchmark.rewards as rewards
-import resco_benchmark.states as states
+import  rewards as rewards
+import  states as states
 
-from resco_benchmark.agents.stochastic import STOCHASTIC
-from resco_benchmark.agents.maxwave import MAXWAVE
-from resco_benchmark.agents.maxpressure import MAXPRESSURE
-from resco_benchmark.agents.pfrl_dqn import IDQN
-from resco_benchmark.agents.pfrl_ppo import IPPO
-from resco_benchmark.agents.mplight import MPLight
-from resco_benchmark.agents.fma2c import FMA2C
+from  agents.stochastic import STOCHASTIC
+from  agents.maxwave import MAXWAVE
+from  agents.maxpressure import MAXPRESSURE
+from  agents.pfrl_dqn import IDQN
+from  agents.pfrl_ppo import IPPO
+from  agents.mplight import MPLight
+from  agents.fma2c import FMA2C
+from agents.fix_time import FixedTimeAgent
+from agents.graphAgent import GraphBasedAgent
 
 agent_configs = {
     # *VAL configs have distance settings according to the validation scenarios
+    'FIX': {
+        'agent': FixedTimeAgent,
+        'state': states.wave,
+        'reward': rewards.wait,
+        'max_distance': 50
+    },
+    'GRAPH': {
+        'agent': GraphBasedAgent,
+        'state': states.wave,
+        'reward': rewards.wait,
+        'max_distance': 50
+    },
     'MAXWAVEVAL': {
         'agent': MAXWAVE,
         'state': states.wave,

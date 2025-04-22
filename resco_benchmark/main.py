@@ -2,23 +2,25 @@ import pathlib
 import os
 import multiprocessing as mp
 
+import sys
+sys.path.append('/home/mansour/project/Traffic_signal_control/RESCO')
 
 from multi_signal import MultiSignal
 import argparse
-from resco_benchmark.config.agent_config import agent_configs
-from resco_benchmark.config.map_config import map_configs
-from resco_benchmark.config.mdp_config import mdp_configs
+from config.agent_config import agent_configs
+from config.map_config import map_configs
+from config.mdp_config import mdp_configs
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--agent", type=str, default='STOCHASTIC',
-                    choices=['STOCHASTIC', 'MAXWAVE', 'MAXPRESSURE', 'IDQN', 'IPPO', 'MPLight', 'MA2C', 'FMA2C',
+                    choices=['GRAPH','FIX', 'STOCHASTIC', 'MAXWAVE', 'MAXPRESSURE', 'IDQN', 'IPPO', 'MPLight', 'MA2C', 'FMA2C',
                              'MPLightFULL', 'FMA2CFull', 'FMA2CVAL'])
     ap.add_argument("--trials", type=int, default=1)
     ap.add_argument("--eps", type=int, default=100)
     ap.add_argument("--procs", type=int, default=1)
-    ap.add_argument("--map", type=str, default='ingolstadt1',
+    ap.add_argument("--map", type=str, default='cologne8',
                     choices=['grid4x4', 'arterial4x4', 'ingolstadt1', 'ingolstadt7', 'ingolstadt21',
                              'cologne1', 'cologne3', 'cologne8',
                              ])
@@ -111,3 +113,13 @@ def run_trial(args, trial):
 
 if __name__ == '__main__':
     main()
+
+# python3 main.py --map cologne3 --agent IDQN --libsumo 1
+# python3 main.py --map cologne8 --agent IDQN --libsumo 1 --trials 4 --procs 8
+# python3 main.py --map cologne8 --agent IPPO  --libsumo 1 --trials 4 --procs 4 --load 1
+
+# 'STOCHASTIC', 'MAXWAVE', 'MAXPRESSURE', 
+# python3 main.py --map cologne8 --agent STOCHASTIC --libsumo 1 --trials 4 --procs 8
+# python3 main.py --map cologne8 --agent MAXWAVE --libsumo 1 --trials 4 --procs 8
+# python3 main.py --map cologne8 --agent GRAPH --libsumo 1 --trials 4 --procs 8
+

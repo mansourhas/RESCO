@@ -3,7 +3,7 @@ import numpy as np
 import traci
 import sumolib
 import gym
-from resco_benchmark.traffic_signal import Signal
+from traffic_signal import Signal
 
 
 class MultiSignal(gym.Env):

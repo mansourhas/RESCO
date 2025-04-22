@@ -1,6 +1,6 @@
 import numpy as np
 
-from resco_benchmark.config.mdp_config import mdp_configs
+from  config.mdp_config import mdp_configs
 
 
 def drq(signals):
