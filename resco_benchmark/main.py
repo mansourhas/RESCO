@@ -118,6 +118,8 @@ if __name__ == '__main__':
 # python3 main.py --map cologne8 --agent IDQN --libsumo 1 --trials 4 --procs 8
 # python3 main.py --map cologne8 --agent IPPO  --libsumo 1 --trials 4 --procs 4 --load 1
 
+# cd RESCO/resco_benchmark/
+# export LIBSUMO_AS_TRACI=True
 # 'STOCHASTIC', 'MAXWAVE', 'MAXPRESSURE', 
 # python3 main.py --map cologne8 --agent STOCHASTIC --libsumo 1 --trials 4 --procs 8
 # python3 main.py --map cologne8 --agent MAXWAVE --libsumo 1 --trials 4 --procs 8
